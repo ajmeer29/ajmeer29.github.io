@@ -87,13 +87,13 @@ a {
  	color: white;
  	line-height: 1.1em;
  	text-align: center;
- 	font-family: 'Night Machine';
+ 	font-family: 'Gloss_And_Bloom';
  	font-weight: 300;
  	font-size: 80px;
  	letter-spacing: 2px;
  }
  .registerButton {
- 	font-family: 'Night Machine';
+ 	font-family: 'Gloss_And_Bloom';
  	position: relative;
  	top: 45%;
  	left: 40%;
@@ -419,7 +419,7 @@ a {
  	background: white;
  	line-height: 1.1em;
  	text-align: center;
- 	font-family: 'Night Machine',sans-serif;
+ 	font-family: 'Gloss_And_Bloom',sans-serif;
  	font-weight: 300;
  	-webkit-background-clip: text;
  	-webkit-text-fill-color: transparent;
@@ -713,7 +713,7 @@ img {
 	transform: translate(-50%, -50%);
 	line-height: normal;
 	/*font: normal normal normal 45px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
-	font-family: 'Night Machine';
+	font-family: 'Gloss_And_Bloom';
 	font-size: 35px;
     word-wrap: break-word;
     padding-top: auto;
@@ -786,7 +786,7 @@ img {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	line-height: normal;
-	font-family: 'Night Machine';
+	font-family: 'Gloss_And_Bloom';
 	/*font: normal normal normal 28px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
     word-wrap: break-word;
     font-size: 25px;
@@ -863,7 +863,7 @@ img {
 	color: #00305B;
 	line-height: normal;
 	/*font: normal normal normal 45px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
-	font-family: 'Night Machine';
+	font-family: 'Gloss_And_Bloom';
 	font-size: 35px;
     word-wrap: break-word;
     text-align: center;
@@ -875,7 +875,7 @@ img {
 	letter-spacing: 0.05em;
 	color: #00305B;
 	line-height: normal;
-	font-family: 'Night Machine',sans-serif;
+	font-family: 'Gloss_And_Bloom',sans-serif;
 	/*font: normal normal normal 28px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
     word-wrap: break-word;
     text-align: center;
@@ -1283,7 +1283,7 @@ letter-spacing: 0.05em;
 color: #00305B;
 line-height: normal;
 /*font: normal normal normal 45px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
-font-family: 'Night Machine';
+font-family: 'Gloss_And_Bloom';
 font-size: 35px;
 word-wrap: break-word;
 text-align: center;
@@ -1361,7 +1361,7 @@ width: auto;
 margin-top: 50px;
 color: #00305B;
 line-height: normal;
-font-family: 'Night Machine',sans-serif;
+font-family: 'Gloss_And_Bloom',sans-serif;
 /*font: normal normal normal 35px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
 word-wrap: break-word;
 text-align: center;
@@ -1689,7 +1689,7 @@ footer {
 	color: #00305B;
 	line-height: normal;
 	/*font: normal normal normal 45px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
-	font-family: 'Night Machine';
+	font-family: 'Gloss_And_Bloom';
 	font-size: 35px;
 	word-wrap: break-word;
 	text-align: center;
@@ -1729,7 +1729,7 @@ footer h1 {
 	/*color: #00305B;*/
 	color: white;
 	line-height: normal;
-	font-family: 'Night Machine',sans-serif;
+	font-family: 'Gloss_And_Bloom',sans-serif;
 	font-size: 35px;
 	word-wrap: break-word;
 }
@@ -1799,7 +1799,7 @@ footer hr {
 	color: #00305B;
 	line-height: normal;
 	/*font: normal normal normal 45px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
-	font-family: 'Night Machine';
+	font-family: 'Gloss_And_Bloom';
 	font-size: 35px;
 	word-wrap: break-word;
 	text-align: center;
@@ -1834,7 +1834,7 @@ footer hr {
 	color: white;
 	line-height: normal;
 	/*font: normal normal normal 40px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
-	font-family: 'Night Machine';
+	font-family: 'Gloss_And_Bloom';
 	font-family: 35px;
 	word-wrap: break-word;
 }
