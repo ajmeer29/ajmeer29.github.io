@@ -62,7 +62,7 @@ sub {
 }
 /*  reset for Menu Icon */
 
-@media (min-width: 801px ) {
+@media (min-width: 800px ) {
 
 a {
  	text-decoration: none;
@@ -88,12 +88,12 @@ a {
  	line-height: 1.1em;
  	text-align: center;
  	font-family: 'Gloss_And_Bloom';
- 	font-weight: 300;
- 	font-size: 80px;
+ 	font-weight: 200;
+ 	font-size: 40px;
  	letter-spacing: 2px;
  }
  .registerButton {
- 	font-family: 'Gloss_And_Bloom';
+ 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  	position: relative;
  	top: 45%;
  	left: 40%;
@@ -713,7 +713,7 @@ img {
 	transform: translate(-50%, -50%);
 	line-height: normal;
 	/*font: normal normal normal 45px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
-	font-family: 'Gloss_And_Bloom';
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	font-size: 35px;
     word-wrap: break-word;
     padding-top: auto;
@@ -786,7 +786,7 @@ img {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	line-height: normal;
-	font-family: 'Gloss_And_Bloom';
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	/*font: normal normal normal 28px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
     word-wrap: break-word;
     font-size: 25px;
