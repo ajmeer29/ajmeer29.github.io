@@ -259,7 +259,7 @@ a {
  	height: 16px;
  	width: 16px;
  	right: 22px;
- 	//top: 50%; /* In case mis-behaves add 20px */
+ 	top: 50%; /* In case mis-behaves add 20px */
  	transform: translateY(-100%) scale(0);
  	opacity: 1;
  }
@@ -420,7 +420,7 @@ a {
  	line-height: 1.1em;
  	text-align: center;
  	font-family: 'Gloss_And_Bloom',sans-serif;
- 	font-weight: 300;
+ 	font-weight: relative;
  	-webkit-background-clip: text;
  	-webkit-text-fill-color: transparent;
  	font-size: 40px;
@@ -471,7 +471,7 @@ a {
 .stretchy-nav a {
 	text-decoration: none;
 	color: black;
-	//font-size: 24px;
+	font-size: 24px;
 	cursor: pointer;
 }
 .mobileMenu ul li a{
@@ -485,7 +485,7 @@ a {
 .mobileMenu {
 	margin: 0;
 	padding: 0;
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: -100%;
 	width: 100%;
@@ -498,7 +498,7 @@ a {
 .mobileMenu ul {
 	margin: 0;
 	padding: 0;
-	position: absolute;
+	position: relative;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -561,7 +561,7 @@ img {
 	width: 400%;
 	height: 100vh;
 	position: relative;
-	//left: 50%;
+	left: 50%;
 	-webkit-animation: slideshow 60s infinite;
 	animation-delay: 8s;
 	overflow: hidden;
@@ -591,7 +591,7 @@ img {
 	width: 400%;
 	height: 70vh;
 	position: relative;
-	//left: 50%;
+	left: 50%;
 	-webkit-animation: slideshow 40s infinite;
 	animation-delay: 8s;
 	overflow: hidden;
@@ -832,7 +832,7 @@ img {
 	font-family: 'Roboto', sans-serif;
 	font-size: 22px;
 	padding-top: 8px;
-	//width: 20%;
+	width: 20%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 8px;
@@ -864,7 +864,7 @@ img {
 	line-height: normal;
 	/*font: normal normal normal 45px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;*/
 	font-family: 'Gloss_And_Bloom';
-	font-size: 35px;
+	font-size: 30px;
     word-wrap: break-word;
     text-align: center;
 }
@@ -1739,11 +1739,11 @@ footer hr {
 }
 .contactTable {
 	display: table;
-	//background-color: #242729;
+	background-color: #242729;
 	width: 100%;
 }
 .contactInformation h2, .address h2{
-	//color: white;
+	color: white;
 	line-height: 1.1em;
 	padding-bottom: 15px;
 }
@@ -1772,7 +1772,7 @@ footer hr {
 	height: auto;
 }
 .footerBottom {
-	//background-color: #242729;
+	background-color: #242729;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	color: #bbc0c4;
