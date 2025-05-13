@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INDHAN 2K19 – Countdown</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #141E30, #243B55);
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -18,54 +20,78 @@
       text-align: center;
       padding: 1rem;
     }
+
     h1 {
-      font-size: 2.5rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
       margin: 0.5em 0;
+      color: #f1c40f;
+      letter-spacing: 2px;
     }
+
     h2 {
       font-size: 1.2rem;
-      font-weight: 300;
-      margin-bottom: 2em;
-    }
-    .countdown {
-      display: flex;
-      gap: 1rem;
-      font-size: 2rem;
-      font-weight: bold;
-      flex-wrap: wrap;
-    }
-    .time-box {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1rem 1.5rem;
-      border-radius: 10px;
-      min-width: 80px;
-    }
-    .label {
-      font-size: 0.8rem;
       font-weight: 400;
       color: #ccc;
+      margin-bottom: 2em;
     }
+
+    .countdown {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .time-box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      min-width: 90px;
+      box-shadow: 0 0 10px rgba(241, 196, 15, 0.3);
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .time-box div:first-child {
+      font-size: 2.5rem;
+      color: #f1c40f;
+      text-shadow: 0 0 5px #f1c40f;
+    }
+
+    .label {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #ddd;
+      margin-top: 0.3rem;
+    }
+
     .btn-enter {
-      margin-top: 2rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #f39c12;
+      margin-top: 2.5rem;
+      padding: 0.9rem 2rem;
+      background-color: #e67e22;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       color: white;
       font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s;
       text-decoration: none;
+      box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3);
+      transition: all 0.3s;
     }
+
     .btn-enter:hover {
-      background-color: #e67e22;
+      background-color: #d35400;
+      transform: scale(1.05);
     }
+
     @media (max-width: 600px) {
       .countdown {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        gap: 1rem;
       }
       h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -73,6 +99,7 @@
 <body>
   <h1>INDHAN 2K19</h1>
   <h2>National Level Technical Symposium</h2>
+
   <div class="countdown" id="countdown">
     <div class="time-box"><div id="days">00</div><div class="label">Days</div></div>
     <div class="time-box"><div id="hours">00</div><div class="label">Hours</div></div>
