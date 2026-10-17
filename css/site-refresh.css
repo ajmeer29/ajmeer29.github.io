@@ -1345,3 +1345,213 @@ html[data-theme="dark"] .infoBox a {
 		transform: none;
 	}
 }
+
+.nav-visibler {
+	display: none !important;
+}
+
+@media (min-width: 961px) {
+	.stretchy-nav {
+		top: 1.25rem;
+		right: 1.25rem;
+		display: flex;
+		align-items: center;
+		pointer-events: auto;
+	}
+
+	.stretchy-nav .nav-trigger,
+	.stretchy-nav .stretchy-nav-bg {
+		display: none;
+	}
+
+	.stretchy-nav .mobileMenu {
+		position: static;
+		width: auto;
+		height: auto;
+		margin: 0;
+		padding: .35rem;
+		border: 1px solid rgba(255, 255, 255, .18);
+		border-radius: 999px;
+		background: rgba(5, 22, 38, .62);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, .16);
+		opacity: 1;
+		backdrop-filter: blur(14px);
+		transform: none;
+		visibility: visible;
+	}
+
+	.stretchy-nav .mobileMenu ul {
+		position: static;
+		display: flex;
+		align-items: center;
+		gap: .15rem;
+		margin: 0;
+		padding: 0;
+		transform: none;
+		visibility: visible;
+	}
+
+	.stretchy-nav .mobileMenu ul li {
+		list-style: none;
+	}
+
+	.stretchy-nav .mobileMenu ul li a {
+		display: flex;
+		height: auto;
+		align-items: center;
+		padding: .65rem .7rem;
+		border-radius: 999px;
+		color: rgba(255, 255, 255, .82);
+		font-family: "Syne", "Segoe UI", sans-serif;
+		font-size: .82rem;
+		font-weight: 700;
+		text-decoration: none;
+		transition: color .2s ease, background-color .2s ease;
+	}
+
+	.stretchy-nav .mobileMenu ul li a.active,
+	.stretchy-nav .mobileMenu ul li a:hover {
+		background: rgba(255, 255, 255, .14);
+		color: #fff;
+	}
+
+	.stretchy-nav .mobileMenu ul a span {
+		opacity: 1;
+		transform: none;
+	}
+
+	.stretchy-nav .mobileMenu ul a .icon {
+		display: none;
+	}
+
+	.theme-toggle {
+		top: 1.25rem;
+		right: calc(1.25rem + 25rem);
+	}
+}
+
+@media (max-width: 960px) {
+	.stretchy-nav {
+		top: 1rem;
+		right: 1rem;
+		pointer-events: auto;
+	}
+
+	.stretchy-nav .nav-trigger {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: auto;
+		display: block;
+		width: 3.25rem;
+		height: 3.25rem;
+		border: 1px solid rgba(255, 255, 255, .22);
+		border-radius: 50%;
+		background: rgba(5, 22, 38, .72);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+		backdrop-filter: blur(12px);
+	}
+
+	.stretchy-nav .stretchy-nav-bg {
+		display: none;
+	}
+
+	.stretchy-nav .mobileMenu {
+		position: absolute;
+		top: 4rem;
+		right: 0;
+		left: auto;
+		width: min(19rem, calc(100vw - 2rem));
+		height: auto;
+		margin: 0;
+		padding: .45rem;
+		border: 1px solid var(--site-border);
+		border-radius: 1rem;
+		background: var(--site-surface);
+		box-shadow: 0 1rem 3rem rgba(0, 0, 0, .22);
+		opacity: 0;
+		transform: translateY(-.4rem);
+		visibility: hidden;
+		transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+	}
+
+	.stretchy-nav.nav-is-visible .mobileMenu,
+	.stretchy-nav .mobileMenu.activeMobile {
+		overflow: visible;
+		opacity: 1;
+		transform: translateY(0);
+		visibility: visible;
+	}
+
+	.stretchy-nav .mobileMenu ul {
+		position: static;
+		display: grid;
+		gap: .15rem;
+		margin: 0;
+		padding: 0;
+		transform: none;
+		text-align: left;
+	}
+
+	.stretchy-nav .mobileMenu ul li {
+		list-style: none;
+	}
+
+	.stretchy-nav .mobileMenu ul li a {
+		display: flex;
+		height: auto;
+		align-items: center;
+		justify-content: space-between;
+		padding: .75rem .8rem;
+		border-radius: .65rem;
+		color: var(--site-ink);
+		font-family: "Syne", "Segoe UI", sans-serif;
+		font-size: .95rem;
+		font-weight: 600;
+	}
+
+	.stretchy-nav .mobileMenu ul li a.active,
+	.stretchy-nav .mobileMenu ul li a:hover {
+		background: color-mix(in srgb, var(--site-accent) 14%, var(--site-surface));
+		color: var(--site-ink);
+	}
+
+	.stretchy-nav .mobileMenu ul a span {
+		opacity: 1;
+		transform: none;
+	}
+
+	.stretchy-nav .mobileMenu ul a .icon {
+		position: static;
+		display: inline-flex;
+		width: 2rem;
+		height: 2rem;
+		align-items: center;
+		justify-content: center;
+		border-radius: .55rem;
+		background: var(--site-background);
+		transform: none;
+	}
+
+	.stretchy-nav .mobileMenu ul a .icon i {
+		color: var(--site-muted);
+		font-size: .95rem;
+	}
+
+	.theme-toggle {
+		top: 1.25rem;
+		right: 5rem;
+	}
+}
+
+@media (max-width: 560px) {
+	.stretchy-nav {
+		top: 1rem;
+		right: 1rem;
+	}
+
+	.theme-toggle {
+		top: 1.4rem;
+		right: 5rem;
+	}
+}
