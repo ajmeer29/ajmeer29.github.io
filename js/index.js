@@ -9,22 +9,11 @@ $('.nav-visibler').hide();
 $('.indhanHeroBar').hide();
 var lastWidth = $(window).width();
 function mobileMenu() {
-	$('.stretchy-nav ul li:nth-child(1) i').removeClass('fa-home');
-	$('.stretchy-nav ul li:nth-child(2) i').removeClass('fa-tasks');
-	$('.stretchy-nav ul li:nth-child(3) i').removeClass('fa-users');
-	$('.stretchy-nav ul li:nth-child(4) i').removeClass('fa-handshake-o');
-	$('.stretchy-nav ul li:nth-child(5) i').removeClass('fa-phone');
-	$('.stretchy-nav .nav-trigger i').addClass('fa');
-	$('.stretchy-nav .nav-trigger i').addClass('fa-bars fa-2x');
-	$('.stretchy-nav .nav-trigger i').click(function() {
-		$('.stretchy-nav .nav-trigger i').toggleClass('fa-bars fa-2x');
-		$('.stretchy-nav .nav-trigger i').toggleClass('fa-times fa-2x');
+	$('.stretchy-nav .nav-trigger').off('click.mobileMenu').on('click.mobileMenu', function() {
 		$('.mobileMenu').toggleClass('activeMobile');
 	});
-	$('.stretchy-nav .mobileMenu a').click(function() {
-		$('.stretchy-nav .nav-trigger i').toggleClass('fa-bars fa-2x');
-		$('.stretchy-nav .nav-trigger i').toggleClass('fa-times fa-2x');
-		$('.mobileMenu').toggleClass('activeMobile');
+	$('.stretchy-nav .mobileMenu a').off('click.mobileMenu').on('click.mobileMenu', function() {
+		$('.mobileMenu').removeClass('activeMobile');
 	});
 };
 if ($(window).width() < 800) {
@@ -33,10 +22,16 @@ if ($(window).width() < 800) {
 $(window).resize(function() {
 	if ($(window).width() != lastWidth) {
 		if ($(window).width() < 800) {
-		// mobileMenu();
+		mobileMenu();
 	}
-	else if ($(window).width() > 850) {
+	else if ($(window).width() >= 800) {
 
+	$('.stretchy-nav .nav-trigger').off('click.mobileMenu');
+	$('.stretchy-nav .mobileMenu a').off('click.mobileMenu');
+	$('.mobileMenu').removeClass('activeMobile');
+	$('.stretchy-nav').removeClass('nav-is-visible');
+	}
+	if ($(window).width() > 850) {
 	$('.stretchy-nav ul li:nth-child(1) i').addClass('fa-home');
 	$('.stretchy-nav ul li:nth-child(2) i').addClass('fa-tasks');
 	$('.stretchy-nav ul li:nth-child(3) i').addClass('fa-users');

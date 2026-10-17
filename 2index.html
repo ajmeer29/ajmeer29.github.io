@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en">
 
-<head><meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<head><meta charset="utf-8">
 	
-	<meta name="viewport" content="width=device-width">
-	<meta name="description" content="SPE INDHAN 2K19 is a two day National technical symposium organised by the Departmment of Petroleum and Petrochemical Engineering of JNTU KAKINADA.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="description" content="Explore the SPE INDHAN 2K19 symposium archive, organised by the Department of Petroleum and Petrochemical Engineering at JNTU Kakinada.">
 <meta name="keywords" content="petroleum, chemical, chemical engineering, petroleum engineering, spe, speindhan, indhan, JNTUK, jntuk fest, 2k19, petroleum fests, chemcial fests" />
 		<meta name="author" content="speindhan" />
 <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
@@ -25,22 +26,19 @@
 <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
-	<link rel="stylesheet" type="text/css" href="css/loader.css" />
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="stylesheet" type="text/css" href="css/countDown.css">
 	<link rel="stylesheet" type="text/css" href="css/bttn.min.css">
+	<link rel="stylesheet" type="text/css" href="css/site-refresh.css?v=theme-toggle-7">
+	<script src="js/theme-toggle.js" defer></script>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:700|Roboto|Source+Sans+Pro" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Daancing+Script" rel="stylesheet">
 	<script type="text/javascript" src="js/modernizr.js"></script>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/stretchMenu.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<script src="https://use.fontawesome.com/4326c746fe.js"></script>
-	<script type="text/javascript" src="js/smoothScroll.js"></script>
 	<script type="text/javascript" src="js/close.js"></script>
-	<script type="text/javascript" src="js/countDown.js"></script>
-	<title>SPE INDHAN 2K19</title>
+	<title>SPE INDHAN 2K19 | Event Archive</title>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96589286-2"></script>
 <script>
@@ -56,15 +54,15 @@
 
 
 </head>
-<body class="scrolllock">
+<body>
+	<button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+		<span class="theme-toggle-icon theme-toggle-icon-dark" aria-hidden="true">&#9790;</span>
+		<span class="theme-toggle-icon theme-toggle-icon-light" aria-hidden="true">&#9728;</span>
+		<span class="theme-toggle-label">Dark mode</span>
+	</button>
 	<script type="text/javascript">
 		var info = "hii";
 		$(document).ready(function() {
-			setTimeout(function(){
-			$('body').removeClass('scrolllock');
-			$('#loader-wrapper').fadeOut();
-	     	}, 5000);
-
 			$('#menu2').click(function () {
 		$path = $('.eventsContainer').offset().top;
 		$('html, body').animate({scrollTop:$path}, 1000);
@@ -110,24 +108,17 @@
 			}
 	</script>
 <!--script> alert('Registrations are closed now, Registerd users can login and check your abstract status'); </script-->
-	<div id="loader-wrapper">
-	<div id="loader-container">
-	<div id="loader">
-	<div id="content"><h1>INDHAN</h1></div>	
-	</div>
-	</div>
-	</div>
 	<header class="box">
 		<!--<div class="indhanHeroBar" style="width: 100%; height: 50px;">
 			<h1 class="font-text">SPE INDHAN 2K18</h1>
 		</div>-->
-<div class="logo"><img src="images/logos/logos.png"></div>
+<div class="logo"><img src="images/logos/logos.png" alt="SPE INDHAN 2K19"></div>
 		<div class="nav-visibler" style="width: 100%; height: 100%;"></div>
 		<nav class="stretchy-nav">
-			<a class="nav-trigger" href="#">
+			<button class="nav-trigger" type="button" aria-label="Toggle navigation" aria-controls="site-menu" aria-expanded="false">
 			<span aria-hidden="true"><i></i></span>
-			</a>
-	<div class="mobileMenu">
+			</button>
+	<div class="mobileMenu" id="site-menu">
 		<ul>
 			<li id="menu1">
 				<a href="#" class="active"><span class="menulabel" >Home</span><span class="icon" id="home"><i class="fa fa-home" aria-hidden="true"></i>
@@ -156,23 +147,21 @@
    
     <div id="mainbox">
     	<div id="imgbox">
-    		<img class="slide" src="images/index/index12.jpg" width="100%" height="100%" />
-    		<img class="slide" src="images/index/index4.jpg" width="100%" height="100%" />
-    		<img class="slide" src="images/index/index2.jpg" width="100%" height="100%" />
-    		<img class="slide" src="images/index/index9.jpg" width="100%" height="100%" />
+    		<img class="slide" src="images/index/index12.jpg" width="100%" height="100%" alt="" />
+    		<img class="slide" src="images/index/index4.jpg" width="100%" height="100%" alt="" />
+    		<img class="slide" src="images/index/index2.jpg" width="100%" height="100%" alt="" />
+    		<img class="slide" src="images/index/index9.jpg" width="100%" height="100%" alt="" />
     	</div>
     </div>
 
 	<!--<div class="mainIcons"></div> -->
-	<div class="title"><!-- <img src="images/titile.png"> --><h1>SPE INDHAN 2K19</h1></div>
-	<div class="timer-wrap">
-	<p id="timer"><sup>Event Starts in &nbsp;</sup><span id="timerSPAN"></span></p>
-	</div>
-	<div class="registerButton"><a href="register-login/"><button class="bttn-jelly bttn-lg bttn-primary">&nbsp; REGISTER/LOGIN &nbsp; </button></a></div>
+	<p class="archive-badge">2019 event archive &middot; registrations closed</p>
+	<div class="title"><h1>SPE INDHAN 2K19</h1></div>
+	<div class="registerButton"><a href="#events" class="archive-cta">Explore events</a></div>
 	<div class="aboutContainer">
 	<div class="aboutInfo">
 	  <div class="abouth1">
-			<h1>Anout</h1></div>
+			<h1>About</h1></div>
 		<div class="aboutp">
 		<p class="font-text">A two day National <em>technical</em> symposium organised by the Department of Petroleum and Petrochemical Engineering of JNTUK KAKINADA.</p>
 	</div>
@@ -204,6 +193,11 @@
 		<div id="events" class="eventsContainer">
 			<h1>Events</h1>
 			<hr>
+		<div class="event-search">
+			<label for="event-search-input">Find an event</label>
+			<input id="event-search-input" type="search" placeholder="Search event names or descriptions" autocomplete="off">
+			<p class="event-search-status" aria-live="polite">Showing all events</p>
+		</div>
 		<div class="events">
 		<div class="event workshop-div">
 			<i class="workshoplogo"><img src="images/events/werkstatt.png"> SYMPOSIUM</i>
@@ -349,7 +343,6 @@
 		</ul>
 		</div>
 	</div>
-	<div id="referencePoint2"></div>
 <!-- </div> -->
 <!-- <div class="faculty2div"> -->
 <div class="at-column faculty2">
@@ -370,6 +363,7 @@
 				</div>
 			</div>
 		</div>
+		<div id="referencePoint2"></div>
 
 <!-- Student Cordinators -->
 	<div class="studentCoordinators">
@@ -1060,29 +1054,14 @@ Andhra Pradesh,<br>
 <button class="bttn-material-flat bttn-sm bttn-primary" onclick="copyText('#mapLocation')">COORDINATES</button></p>
 </div>
 <div id="map">
+	<iframe title="Map showing JNTU Kakinada" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=82.222290%2C16.959713%2C82.262290%2C16.999713&amp;layer=mapnik&amp;marker=16.979713%2C82.242290"></iframe>
+	<a class="map-link" href="https://www.openstreetmap.org/?mlat=16.979713&amp;mlon=82.242290#map=15/16.979713/82.242290" target="_blank" rel="noopener noreferrer">Open map in a new tab</a>
 </div>
 </div>
 <div class="footerBottom">
 	<p class="font-text"> &copy; SPE INDHAN 2K19</p>
 </div>
-<script>
-function initMap() {
-var jntuk = {
-lat: 16.979713,
-lng: 82.242290
-};
-var map = new google.maps.Map(document.getElementById('map'), {
-zoom: 12,
-center: jntuk
-});
-var marker = new google.maps.Marker({
-position: jntuk,
-map: map
-});
-}
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtE-iGxqC8YHEfg9fUoUfd3w1OvA8FWRc&callback=initMap">
-</script>
+<script src="js/site-enhancements.js"></script>
 </div>
 </footer>
 </body>

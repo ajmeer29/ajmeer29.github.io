@@ -2,137 +2,462 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INDHAN 2K19 – Countdown</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a2033" />
+  <meta name="description" content="Explore the SPE INDHAN 2K19 technical symposium archive, hosted by JNTU Kakinada." />
+  <title>SPE INDHAN 2K19 — Event Archive</title>
+  <link rel="stylesheet" href="./css/font.css" />
+  <script src="./js/theme-toggle.js" defer></script>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #141E30, #243B55);
+    :root {
+      color-scheme: light;
+      font-family: "Source Sans Pro", "Segoe UI", sans-serif;
       color: #fff;
+      --accent: #f4b544;
+      --muted: #d3dce5;
+      --line: rgba(255, 255, 255, .24);
+      --hero-overlay: linear-gradient(90deg, rgba(5, 18, 31, .86) 0%, rgba(5, 18, 31, .68) 48%, rgba(5, 18, 31, .3) 100%);
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --hero-overlay: linear-gradient(90deg, rgba(3, 12, 22, .92) 0%, rgba(3, 12, 22, .76) 48%, rgba(3, 12, 22, .46) 100%);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-width: 320px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      color: #fff;
+      background: #0a2033;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .hero {
+      position: relative;
       display: flex;
+      min-height: min(900px, 100svh);
+      min-height: max(680px, 100svh);
       flex-direction: column;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 0 clamp(1.25rem, 7vw, 7rem);
+      background: #0a2033;
+    }
+
+    .hero::before,
+    .hero::after {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero::before {
+      background-image: var(--hero-overlay), url("./images/index/index12.jpg");
+      background-position: center, center 43%;
+      background-size: cover;
+    }
+
+    .hero::after {
+      background: linear-gradient(0deg, rgba(3, 14, 25, .64), transparent 32%);
+    }
+
+    .site-header {
+      display: flex;
+      min-height: 6.5rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      min-width: 0;
+      align-items: center;
+      gap: .9rem;
+      text-decoration: none;
+    }
+
+    .brand img {
+      display: block;
+      width: clamp(7rem, 17vw, 12rem);
+      height: auto;
+    }
+
+    .brand-label {
+      padding-left: .9rem;
+      border-left: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: clamp(.75rem, 2.5vw, 2rem);
+    }
+
+    .header-link {
+      color: #fff;
+      font-size: .95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    .header-link:hover {
+      color: var(--accent);
+    }
+
+    .theme-toggle {
+      display: inline-flex;
+      min-height: 2.75rem;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 1rem;
+      gap: .5rem;
+      padding: .55rem .9rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(5, 18, 31, .42);
+      color: #fff;
+      font: inherit;
+      font-size: .9rem;
+      font-weight: 700;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: background .2s ease, border-color .2s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: rgba(255, 255, 255, .55);
+      background: rgba(5, 18, 31, .68);
+    }
+
+    .theme-toggle-icon {
+      color: var(--accent);
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .theme-toggle-icon-light,
+    html[data-theme="dark"] .theme-toggle-icon-dark {
+      display: none;
+    }
+
+    html[data-theme="dark"] .theme-toggle-icon-light {
+      display: inline;
+    }
+
+    .hero-content {
+      display: flex;
+      width: min(100%, 76rem);
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: clamp(2rem, 5vh, 4rem) 0;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin: 0 0 2.5rem;
+      color: #ffd27b;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 2.6rem;
+      height: 1px;
+      background: var(--accent);
+      content: "";
     }
 
     h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      margin: 0.5em 0;
-      color: #f1c40f;
-      letter-spacing: 2px;
-    }
-
-    h2 {
-      font-size: 1.2rem;
+      margin: 0;
+      color: #fff;
+      font-family: "Gloss_And_Bloom", "Segoe UI", sans-serif;
+      font-size: clamp(4.5rem, 8vw, 7rem);
       font-weight: 400;
-      color: #ccc;
-      margin-bottom: 2em;
+      letter-spacing: 0;
+      line-height: 1.15;
+      text-shadow: 0 5px 28px rgba(0, 0, 0, .32);
     }
 
-    .countdown {
+    h1 span {
+      display: block;
+      color: var(--accent);
+    }
+
+    .intro {
+      max-width: 39rem;
+      margin: 1.4rem 0 0;
+      color: #e1e8ef;
+      font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+      line-height: 1.65;
+    }
+
+    .hero-actions {
       display: flex;
-      gap: 1.5rem;
-      font-size: 2.5rem;
       flex-wrap: wrap;
+      align-items: center;
+      gap: .85rem 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .primary-link {
+      display: inline-flex;
+      min-height: 3.25rem;
+      align-items: center;
       justify-content: center;
-    }
-
-    .time-box {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 1.2rem 1.5rem;
-      border-radius: 12px;
-      min-width: 90px;
-      box-shadow: 0 0 10px rgba(241, 196, 15, 0.3);
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .time-box div:first-child {
-      font-size: 2.5rem;
-      color: #f1c40f;
-      text-shadow: 0 0 5px #f1c40f;
-    }
-
-    .label {
-      font-size: 0.75rem;
-      font-weight: 400;
-      color: #ddd;
-      margin-top: 0.3rem;
-    }
-
-    .btn-enter {
-      margin-top: 2.5rem;
-      padding: 0.9rem 2rem;
-      background-color: #e67e22;
-      border: none;
-      border-radius: 8px;
-      color: white;
+      gap: 1rem;
+      padding: .8rem 1.25rem;
+      border: 1px solid var(--accent);
+      border-radius: .25rem;
+      background: var(--accent);
+      color: #18293a;
       font-size: 1rem;
-      cursor: pointer;
+      font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3);
-      transition: all 0.3s;
+      transition: background .2s ease, border-color .2s ease;
     }
 
-    .btn-enter:hover {
-      background-color: #d35400;
-      transform: scale(1.05);
+    .primary-link:hover {
+      border-color: #ffd27b;
+      background: #ffd27b;
     }
 
-    @media (max-width: 600px) {
-      .countdown {
-        font-size: 1.8rem;
-        gap: 1rem;
+    .primary-link span {
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .secondary-link {
+      padding: .6rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .55);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color .2s ease, border-color .2s ease;
+    }
+
+    .secondary-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .event-status {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      margin: 2.25rem 0 0;
+      color: #e3e9ef;
+      font-size: .9rem;
+      letter-spacing: .015em;
+    }
+
+    .event-status::before {
+      width: .5rem;
+      height: .5rem;
+      flex: 0 0 .5rem;
+      border-radius: 50%;
+      background: var(--accent);
+      content: "";
+    }
+
+    .hero-footer {
+      display: flex;
+      min-height: 5rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid var(--line);
+      color: #e3e9ef;
+      font-size: .85rem;
+    }
+
+    .hero-footer p {
+      margin: 0;
+    }
+
+    .hero-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem 1.25rem;
+    }
+
+    .hero-footer-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .hero-footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        min-height: 100svh;
+        padding: 0 1.25rem;
       }
+
+      .site-header {
+        min-height: 5.5rem;
+      }
+
+      .brand {
+        gap: .65rem;
+      }
+
+      .brand img {
+        width: clamp(6.2rem, 27vw, 8rem);
+      }
+
+      .brand-label {
+        padding-left: .65rem;
+        font-size: .65rem;
+      }
+
+      .header-actions {
+        gap: .7rem;
+      }
+
+      .header-link {
+        display: none;
+      }
+
+      .theme-toggle {
+        min-height: 2.6rem;
+        padding: .5rem .7rem;
+        font-size: .8rem;
+      }
+
+      .hero::before {
+        background-position: center, 58% center;
+      }
+
+      .hero-content {
+        padding: 5rem 0 4rem;
+      }
+
       h1 {
-        font-size: 2.2rem;
+        font-size: clamp(3.5rem, 17vw, 6.5rem);
+        line-height: 1.08;
+      }
+
+      .intro {
+        max-width: 31rem;
+        font-size: 1.05rem;
+      }
+
+      .hero-footer {
+        min-height: 5.5rem;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand-label {
+        max-width: 5.5rem;
+      }
+
+      .theme-toggle-label {
+        display: none;
+      }
+
+      .theme-toggle {
+        width: 2.6rem;
+        padding: .5rem;
+      }
+
+      .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
       }
     }
   </style>
 </head>
 <body>
-  <h1>INDHAN 2K19</h1>
-  <h2>National Level Technical Symposium</h2>
+  <main class="hero">
+    <header class="site-header">
+      <a class="brand" href="./2index.html" aria-label="SPE INDHAN 2K19 archive home">
+        <img src="./images/logos/logos.png" alt="SPE INDHAN 2K19" />
+        <span class="brand-label">Event<br />archive</span>
+      </a>
+      <nav class="header-actions" aria-label="Page navigation">
+        <a class="header-link" href="./2index.html#events">Explore events</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="theme-toggle-icon theme-toggle-icon-dark" aria-hidden="true">&#9790;</span>
+          <span class="theme-toggle-icon theme-toggle-icon-light" aria-hidden="true">&#9728;</span>
+          <span class="theme-toggle-label">Dark mode</span>
+        </button>
+      </nav>
+    </header>
 
-  <div class="countdown" id="countdown">
-    <div class="time-box"><div id="days">00</div><div class="label">Days</div></div>
-    <div class="time-box"><div id="hours">00</div><div class="label">Hours</div></div>
-    <div class="time-box"><div id="minutes">00</div><div class="label">Minutes</div></div>
-    <div class="time-box"><div id="seconds">00</div><div class="label">Seconds</div></div>
-  </div>
+    <section class="hero-content" aria-labelledby="page-title">
+      <p class="eyebrow">JNTU Kakinada · 2019</p>
+      <h1 id="page-title">SPE <span>INDHAN</span><span>2K19</span></h1>
+      <p class="intro">A national-level technical symposium by the Department of Petroleum and Petrochemical Engineering.</p>
+      <div class="hero-actions">
+        <a class="primary-link" href="./2index.html#events">Explore the archive <span aria-hidden="true">→</span></a>
+        <a class="secondary-link" href="./2index.html#team">Meet the team</a>
+      </div>
+      <p class="event-status">2019 event archive · Registrations closed</p>
+    </section>
 
-  <a href="./2index.html" class="btn-enter">Enter Event Website</a>
-
-  <script>
-    const countdown = () => {
-      const endDate = new Date("June 22, 2025 10:00:00").getTime();
-      const now = new Date().getTime();
-      const gap = endDate - now;
-
-      const second = 1000;
-      const minute = second * 60;
-      const hour = minute * 60;
-      const day = hour * 24;
-
-      const d = Math.floor(gap / day);
-      const h = Math.floor((gap % day) / hour);
-      const m = Math.floor((gap % hour) / minute);
-      const s = Math.floor((gap % minute) / second);
-
-      document.getElementById("days").innerText = d.toString().padStart(2, '0');
-      document.getElementById("hours").innerText = h.toString().padStart(2, '0');
-      document.getElementById("minutes").innerText = m.toString().padStart(2, '0');
-      document.getElementById("seconds").innerText = s.toString().padStart(2, '0');
-    };
-
-    setInterval(countdown, 1000);
-    countdown();
-  </script>
+    <footer class="hero-footer">
+      <p>Petroleum &amp; Petrochemical Engineering · Kakinada, Andhra Pradesh</p>
+      <nav class="hero-footer-links" aria-label="Archive sections">
+        <a href="./2index.html#events">Events</a>
+        <a href="./2index.html#sponsors">Sponsors</a>
+        <a href="./2index.html#contact">Contact</a>
+      </nav>
+    </footer>
+  </main>
 </body>
 </html>
